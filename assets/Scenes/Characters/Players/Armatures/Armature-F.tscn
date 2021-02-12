@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Models/Players/Texture.material" type="Material" id=1]
+[ext_resource path="res://assets/Models/Players/Texture.material" type="Material" id=1]
+[ext_resource path="res://assets/Scenes/Customisation/PlayerMaterials/1..material" type="Material" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Woman"
@@ -1675,7 +1676,7 @@ bones/40/bound_children = [  ]
 
 [node name="Mesh" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
-material/0 = null
+material/0 = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Death = SubResource( 2 )
