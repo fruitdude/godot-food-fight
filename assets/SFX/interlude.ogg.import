@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/interlude.ogg-267461db12bec575d9209cc2efa89223.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/interlude.ogg"
+dest_files=[ "res://.import/interlude.ogg-267461db12bec575d9209cc2efa89223.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
