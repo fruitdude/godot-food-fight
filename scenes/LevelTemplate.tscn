@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
-[ext_resource path="res://default_env.tres" type="Environment" id=2]
-[ext_resource path="res://assets/Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=3]
-[ext_resource path="res://scenes/Actors/PlayerM.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://scenes/Actors/PlayerM.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 0, 0.25, 0, 0, 0, 0, 0, 0.25, 5, 0, 0, 5, 0, 0.25, 0, 0, 0.25, 5, -5, 0.25, 0, -5, 0.25, 5, 0, 0, 5, 0, 0, 0, -5, 0, 5, -5, 0, 0, 0, 0, 5, -5, 0, 5, 0, 0.25, 5, -5, 0.25, 5, -5, 0, 0, 0, 0, 0, -5, 0.25, 0, 0, 0.25, 0, -5, 0, 0, -5, 0.25, 0, -5, 0, 5, -5, 0.25, 5 )
@@ -24,10 +23,6 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="Floor/StaticBody"]
 shape = SubResource( 1 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -34, 3, -0.374199 )
-environment = ExtResource( 2 )
-
 [node name="Furniture" type="Node" parent="."]
 editor/display_folded = true
 
@@ -37,7 +32,7 @@ mass = 27.551
 
 [node name="MeshInstance" type="MeshInstance" parent="Furniture/DeskCorner"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, -4 )
-mesh = ExtResource( 3 )
+mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 material/2 = null
@@ -50,5 +45,5 @@ shape = SubResource( 2 )
 transform = Transform( 0.901829, -0.293646, 0.316982, 0, 0.733595, 0.679587, -0.432094, -0.612871, 0.661577, 0, 11.9951, 0 )
 shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1.36898, 3 )
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -19, 1.36898, 3 )
