@@ -30,7 +30,7 @@ func _input(event):
 		_camera.rotation = _v_camera_rotation(-event.relative.y / _mouse_sensitivity)
 		
 	if Input.is_action_just_pressed("fire"):
-		fire()
+		try_to_fire()
 		
 		
 func _h_camera_rotation(camera_rotation):
