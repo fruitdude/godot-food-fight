@@ -1,4 +1,4 @@
-extends KinematicBody
+extends "res://scripts/Actor.gd"
 
 
 const SPEED : float = 7.5
@@ -28,6 +28,9 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation = _h_camera_rotation(-event.relative.x / _mouse_sensitivity)
 		_camera.rotation = _v_camera_rotation(-event.relative.y / _mouse_sensitivity)
+		
+	if Input.is_action_just_pressed("fire"):
+		fire()
 		
 		
 func _h_camera_rotation(camera_rotation):
